@@ -21,8 +21,18 @@ const styles = {
 const Home = () => (
   <div style={styles.color}>
 
-    <div style={styles.width}>
-      <img src={portrait} style={styles.sizeImg} className='mt-5' />
+    <div style={styles.width} className="d-flex flex-column align-items-center">
+      <img src={portrait} style={styles.sizeImg} className='mt-5 mb-4' />
+      <ul className="d-flex flex-column align-items-center">
+        <a href="mailto:Aaronjacobweiner@yahoo.com">AaronJacobWeiner@yahoo.com</a>
+        <a href="#">704-778-2171</a>
+        <a href="https://github.com/aaronweiner2016">Github Link</a>
+        <a href="https://www.linkedin.com/in/aaron-weiner-031051202/">Linkedin
+                        Link</a>
+
+        <a href="file:///C:/Users/Aaron%20Weiner/Downloads/Aaron_Weiner_Resume.PDF">Resume</a>
+
+      </ul>
     </div>
 
   </div>

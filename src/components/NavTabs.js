@@ -1,42 +1,52 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
 
-const styles = {
-  color: {
-    backgroundColor: 'white'
+
+function NavTabs() {
+
+
+  const styles = {
+    color: {
+      backgroundColor: 'white'
+    }
   }
-}
 
-function NavTabs(props) {
   return (
-    <ul style={styles.color} className="nav nav-tabs d-flex justify-content-center">
-      <li className="nav-item">
-        <a
-          href="#home"
-          onClick={() => props.handlePageChange("Home")}
-          className={props.currentPage === "Home" ? "nav-link active" : "nav-link"}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#about"
-          onClick={() => props.handlePageChange("About")}
-          className={props.currentPage === "About" ? "nav-link active" : "nav-link"}
-        >
-          About
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#Projects"
-          onClick={() => props.handlePageChange("Projects")}
-          className={props.currentPage === "Projects" ? "nav-link active" : "nav-link"}
-        >
-          Projects
-        </a>
-      </li>
-    </ul>
+    <nav style={styles.color} className="navbar navbar-expand-lg navbar-light d-flex justify-content-center">
+      <div style={styles.color}>
+        <ul style={styles.color} className="nav nav-tabs">
+          <li className="nav-item">
+            <Link
+              to="/"
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/Home"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/About"
+              className={window.location.pathname === "/About" ? "nav-link active" : "nav-link"}
+            >
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/Projects"
+              className={window.location.pathname === "/Projects" ? "nav-link active" : "nav-link"}
+            >
+              Projects
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 

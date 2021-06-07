@@ -33,13 +33,13 @@ const About = () => (
           mountains where I like to hike, collect plants and invest/research the stock market.
 </p>
         <p className="has-text-weight-bold">
-          In 2020 i started getting more into online jobs and found a way to sell bitcoin but when the market
-          became difficult to navigate and I decided to
-          join the UNC Full Stack Bootcamp for web development. In this class i learned how to code in HTML,
-          CSS, Vanilla Javascript and Jquery for the front end.
+          In 2020 i started getting more into online jobs and found a way to sell bitcoin. When the market
+          became difficult to navigate, I decided to
+          join the UNC Full Stack Bootcamp for web development. In this class I have learned how to utilize HTML,
+          CSS, Vanilla Javascript, Jquery, MySQL, Sequelize, Express.js, Node.js and Handlebars. My best tool I was able to learn
+          was create a full stack application in React.js.
           I also learned how to utilize Bootstrap, Bulma and various other tools to help with front end
-          functionality. For back end development, i learned how to utilize
-          MySQL, Sequelize, Express.js, Node.js and Handlebars.
+          functionality.
 
 </p>
 

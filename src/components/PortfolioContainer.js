@@ -1,33 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import NavTabs from "./NavTabs";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import projectList from "./projectList"
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-class Portfolio extends Component {
-  state = {
-    currentPage: "Home"
-  };
 
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
+function App() {
 
-  renderPage = () => {
-    if (this.state.currentPage === "Home") {
-      return <Home />;
-    } else if (this.state.currentPage === "About") {
-      return <About />;
-    } else if (this.state.currentPage === "Projects") {
-      return <Projects projects={projectList} />;
-    }
-  };
-
-  styles = {
+  const styles = {
     margin: {
       marginLeft: '10%',
       marginRight: '10%',
+      height: '100vh'
     },
     width: {
       width: '100%',
@@ -40,20 +25,22 @@ class Portfolio extends Component {
     }
   }
 
-  render() {
-    return (
-      <div style={this.styles.margin}>
-        <div className="d-flex justify-content-center pb-4" style={this.styles.width, this.styles.color}>
-          <h1 style={this.styles.color}>Aaron Weiner Portfolio</h1>
-        </div>
-        <NavTabs
-          currentPage={this.state.currentPage}
-          handlePageChange={this.handlePageChange}
-        />
-        {this.renderPage()}
+  return (
+    <div style={styles.margin}>
+      <div className="d-flex justify-content-center pb-4" style={styles.width, styles.color}>
+        <h1 style={styles.color}>Aaron Weiner Portfolio</h1>
       </div>
-    );
-  }
+      <Router>
+        <NavTabs
+        />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/About" component={About} />
+        <Route exact path="/Projects" component={Projects} />
+
+      </Router>
+    </div>
+  );
 }
 
-export default Portfolio;
+export default App;

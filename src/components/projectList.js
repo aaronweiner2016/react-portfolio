@@ -2,6 +2,9 @@ import golfer from "../images/golferPlus.png";
 import stockApp from "../images/nicks-gif.gif";
 import weatherApp from "../images/weather.gif";
 import daileyPlanner from "../images/dailey-planner.gif";
+import employeeDir from "../images/employee-directory.png";
+import fitnessTracker from "../images/fitness-tracker.png";
+import techBlog from "../images/tech-blog-snippet.PNG";
 
 
 
@@ -44,10 +47,7 @@ const projects = [
                     name: 'Nick Aisthorpe',
                     github: 'https://www.linkedin.com/in/nick-aisthorpe/'
                 },
-                {
-                    name: '',
-                    github: ''
-                }
+                { name: '', github: '' }
             ]
         }
     },
@@ -57,20 +57,7 @@ const projects = [
             image: weatherApp,
             name: 'Weather Application',
             details: 'This application allows users to see the current and five day weather forecast for any city they type into the search bar. The last city typed will after show up in history.',
-            collab: [
-                {
-                    name: '',
-                    github: ''
-                },
-                {
-                    name: '',
-                    github: ''
-                },
-                {
-                    name: '',
-                    github: ''
-                }
-            ]
+            collab: [{ name: '', github: '' }, { name: '', github: '' }, { name: '', github: '' }]
         }
     },
     {
@@ -79,22 +66,38 @@ const projects = [
             image: daileyPlanner,
             name: 'Dailey Planner Application',
             details: 'This application was designed to allow users to write in a specific time slot and save what was written to local storage and still shows after the page is reloaded. As the work day continues the hours past show up grey, the hours it is on will show up red and the future hours show as green.',
-            collab: [
-                {
-                    name: '',
-                    github: ''
-                },
-                {
-                    name: '',
-                    github: ''
-                },
-                {
-                    name: '',
-                    github: ''
-                }
-            ]
+            collab: [{ name: '', github: '' }, { name: '', github: '' }, { name: '', github: '' }]
         }
-    }
+    },
+    {
+        result: {
+            id: 5,
+            image: employeeDir,
+            name: 'Employee Directory Application',
+            details: 'This was my first react.js application that was created to allow a company to search through there list of employees and find non private information and sort them by name or gender. This application allowed for me to get a stronger grip on writing react and using components and classes.',
+            collab: [{ name: '', github: '' }, { name: '', github: '' }, { name: '', github: '' }]
+        }
+    },
+    {
+        result: {
+            id: 6,
+            image: techBlog,
+            name: 'Tech Blog Application',
+            details: 'This project was designed to allow allow a user to make an account to share information or thoughts on new technologies. Other users may sign on and make comments on the posts. The signed in user may also edit the posts. The most difficult part of this project was going back to pull skills i had learned more towards the beginning of class and implement them with the new sequelize/database skills i have more recently learned',
+            collab: [{ name: '', github: '' }, { name: '', github: '' }, { name: '', github: '' }]
+        }
+    },
+    {
+        result: {
+            id: 7,
+            image: fitnessTracker,
+            name: 'Fitness Tracker Application',
+            details: 'This project was created to allow a user to create a workout and see the stats of the last 7 workouts in multiple different chart data sets. You are also able to add to or finish the last workout you did. Some things this project helped with was enforcing my ability to create a mongo database.',
+            collab: [{ name: '', github: '' }, { name: '', github: '' }, { name: '', github: '' }]
+        }
+    },
+
+
 ]
 
 
