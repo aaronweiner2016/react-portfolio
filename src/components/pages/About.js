@@ -4,7 +4,7 @@ const styles = {
   width: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   color: {
     backgroundColor: 'white',
@@ -12,7 +12,8 @@ const styles = {
   },
   margin: {
     marginLeft: '20%',
-    marginRight: '20%'
+    marginRight: '20%',
+    height: '100vh',
   }
 }
 

@@ -1,17 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 function NavTabs() {
-
+  const [currentTabs, setCurrentTab] = useState('/Home');
 
   const styles = {
     color: {
       backgroundColor: 'white'
     }
   }
-
+  console.log(window.location.pathname)
   return (
     <nav style={styles.color} className="navbar navbar-expand-lg navbar-light d-flex justify-content-center">
       <div style={styles.color}>
@@ -19,8 +19,9 @@ function NavTabs() {
           <li className="nav-item">
             <Link
               to="/"
+              onClick={() => setCurrentTab('/Home')}
               className={
-                window.location.pathname === "/" || window.location.pathname === "/Home"
+                currentTabs === "/" || currentTabs === "/Home"
                   ? "nav-link active"
                   : "nav-link"
               }
@@ -31,7 +32,8 @@ function NavTabs() {
           <li className="nav-item">
             <Link
               to="/About"
-              className={window.location.pathname === "/About" ? "nav-link active" : "nav-link"}
+              onClick={() => setCurrentTab('/About')}
+              className={currentTabs === "/About" ? "nav-link active" : "nav-link"}
             >
               About
             </Link>
@@ -39,7 +41,8 @@ function NavTabs() {
           <li className="nav-item">
             <Link
               to="/Projects"
-              className={window.location.pathname === "/Projects" ? "nav-link active" : "nav-link"}
+              onClick={() => setCurrentTab('/Projects')}
+              className={currentTabs === "/Projects" ? "nav-link active" : "nav-link"}
             >
               Projects
             </Link>

@@ -12,7 +12,7 @@ function App() {
     margin: {
       marginLeft: '10%',
       marginRight: '10%',
-      height: '100vh'
+      minHeight: '100vh'
     },
     width: {
       width: '100%',
@@ -31,8 +31,7 @@ function App() {
         <h1 style={styles.color}>Aaron Weiner Portfolio</h1>
       </div>
       <Router>
-        <NavTabs
-        />
+        <NavTabs />
         <Route exact path="/" component={Home} />
         <Route exact path="/Home" component={Home} />
         <Route exact path="/About" component={About} />

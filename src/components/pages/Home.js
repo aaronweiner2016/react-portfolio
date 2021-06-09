@@ -5,7 +5,7 @@ const styles = {
   width: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    height: '100vh'
   },
   sizeImg: {
     width: '100%',
@@ -15,7 +15,7 @@ const styles = {
   color: {
     backgroundColor: 'white',
     height: '100%',
-  }
+  },
 }
 
 const Home = () => (
